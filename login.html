@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <form action="" class="form" onsubmit="return checkValidate()">
+            <h1>LOG IN</h1>
+            <div class="form-control">
+                <input id="email" type="email" name="email" placeholder="Email">
+                <span class="form-massage"></span>
+                <span class="transition"></span>
+            </div>
+
+            <div class="form-control">
+                <input id="password" type="password" name="password" placeholder="Password">
+                <span class="form-massage"></span>
+                <span class="transition"></span>
+            </div>
+
+            <p class="forget"><a href="">Forget password</a></p>
+
+            <button class="btn-submit" type="submit">Log in</button>
+            <p class="signin">Don't have an acount ? <a href="">Sign up</a></p>
+
+            <script>
+                var email = document.querySelector("#email");
+                var password = document.querySelector("#password");
+
+                var form = document.querySelector(".form");
+                var formControl = document.querySelector(".form-control");
+                var btnSubmit = document.querySelector(".btn-submit")
+
+                btnSubmit.addEventListener('click', function() 
+            {
+                Array.from(formControl).map((ele) =>
+                ele.classList.remove('success', 'error')
+                );
+
+                let isValid = checkValidate();
+
+                if (isValid) 
+               {
+                alert('Dang nhap thanh cong');
+               }
+            });   
+
+            function showError(input, message)
+        {
+            let parent = input.parentNode;
+            let small = parent.querySelector(".form-massage");
+            parent.classList.add('error');
+            small.innerText = message;
+        }
+
+        function showSuccess(input, message)
+        {
+            let parent = input.parentNode;
+            let small = parent.querySelector(".form-massage");
+            parent.classList.remove("error");
+            small.innerText = "";     
+        }
+
+        function checkValidate()
+        {
+            let emailValue = email.value;
+            let passwordValue = password.value;
+
+            let isCheck = true;
+
+            if(emailValue == "")
+            {
+                showError(email, "Email khong hop le!")
+                isCheck = false;
+            }
+            else if (!isEmail(emailValue)) {
+                showError(email, 'Email không đúng định dạng');
+                isCheck = false;
+            }
+            else
+            {
+                showSuccess(email);
+            }
+
+            if(passwordValue == "")
+            {
+                showError(password, "Password khong hop le!")
+                isCheck = false;
+            }
+            else if(!isPassword(passwordValue))
+            {
+                showError(password, "Password must be at least 8 characters and include uppercase, lowercase, and special characters.")
+                isCheck = false;
+
+            }
+            else
+            {
+                showSuccess(password);
+            }
+
+            
+            return isCheck;
+        }
+
+        function isEmail(email) {
+            return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+        }
+
+        function isPassword(password)
+        {
+            if(password.length < 8)
+            {
+                return false;
+            }
+
+            if(!/[a-z]/.test(password))
+            {
+                return false;
+            }
+
+            if(!/[A-Z]/.test(password))
+            {
+                return false;
+            }
+
+            if(!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password))
+            {
+                return false;
+            }
+            return true;
+        }
+        </script>
+    
+</body>
+</html>

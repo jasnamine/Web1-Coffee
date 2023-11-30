@@ -1,0 +1,498 @@
+@import url('https://fonts.cdnfonts.com/css/noto-sans-kayah-li');
+
+:root{
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: .1rem solid rgba(255, 255, 255, .3);
+}
+
+*{
+    font-family: 'Noto Sans Kayah Li', sans-serif;                                                                                
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear ; 
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+.section{
+    padding: 20%;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 7rem;
+    background-color: #231c14;
+}
+
+.header ul li {
+    list-style-type: none;
+}
+
+.logo {
+ display: flex;
+}
+
+.logo li{
+    font-size: 1.6rem;
+    line-height: 3rem;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    list-style: none;
+    color: #fff;
+}
+
+.logo li:hover{
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.header .logo img{
+    width: 5rem;
+    height: 5rem;
+}
+
+.header .navbar a{
+    margin: 0 2rem;
+    font-size: 1.6rem;
+    color: #fff;
+    
+}
+
+.header .navbar a:hover{
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.icons{
+    display: flex;
+}
+
+.haeder .icons div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover{
+    color: var(--main-color);
+}
+
+#menu-btn{
+    display: none;
+}
+
+#profile-btn{
+    height: 4.5rem;
+    width: 4.5rem;
+    padding: 0.7rem;
+}
+
+#cart-btn{
+    height: 4.5rem;
+    width: 4.5rem;
+    padding: 0.7rem;
+}
+
+#menu-btn{
+    height: 4.5rem;
+    width: 4.5rem;
+    padding: 1.2rem 1.5rem;
+}
+
+.header .search-box{
+    background: #fff;
+    display: flex;
+}
+
+.custom-icon-size {
+    font-size: 2.4rem;
+    color: #fff;
+}
+
+#search-text{
+    border: none;
+    outline: none;
+    width: 0;
+    background: #333;
+    font-size: 1.5rem;
+}
+
+.search-box:hover #search-text{
+    width: 20rem;
+    padding: 1rem 1.5rem;
+    background-color: #fff;
+    border-right: none;
+    
+}
+
+#search-btn:hover #search-box{
+    background-color: #fff;
+
+}
+
+#search-btn{
+    padding: 1.1rem 1.5rem;
+    background-color: #231c14;
+    cursor: pointer;
+}
+
+#search-btn:hover i{
+    color: #333;
+}
+
+.header #search-btn:hover{
+    background-color: #fff;
+}
+
+.profile-btn{
+    padding: 1rem 1.5rem;
+}
+
+#menu-btn{
+    display: none;
+}
+
+
+.home{
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/bg-abus.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: 7rem;
+}
+
+
+
+.home .content{
+    max-width: 60rem;
+    
+}
+
+.home .content h3{
+    font-size: 5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.home .content p{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    font-weight: 300;
+    padding: 1rem 0;
+    color: #eee;
+}
+
+.container{
+    display: flex;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 2rem;
+    gap: 1.5rem;
+    padding: 0 10% 10% 10%;  
+}
+
+.heading{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 10rem;
+}
+
+.introduce-img,
+.quality-img,
+.vision-img{
+    text-align: center;
+    flex: 1 1 21rem;
+            
+}
+
+
+.quality-img{
+    text-align: center;
+    flex: 1 1 21rem;
+    margin-left: 1rem;
+            
+}
+
+.vision-img{
+    margin-top: 2rem;
+    text-align: center;
+    flex: 1 1 21rem;
+            
+}
+
+.introduce-img img,
+.quality-img img,
+.vision-img img{
+    width: 100%;
+}
+
+.introduce-text{
+    flex: 1 1 21rem;
+    padding-top: 10rem;
+    
+}
+
+.quality-text{
+    flex: 1 1 21rem;
+    padding-top: 5rem; 
+}
+
+.vision-text{
+    flex: 1 1 21rem;
+    padding-top: 6rem;
+    margin-left: 5rem;
+    
+}
+
+.introduce-text h3,
+.quality-text h3,
+.vision-text h3{
+    font-size: 2.2rem;
+    text-align: center;
+    color: #333;
+    font-weight: 600;
+}
+
+.introduce-text h4,
+.quality-text h4,
+.vision-text h4{
+    font-size: 2rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.introduce-text p,
+.quality-text p,
+.vision-text p{
+    font-size: 2rem;
+    line-height: 1.8;
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+}
+
+.footer{
+    background-color: #111;
+    color: #fff;
+    height: 30rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 2rem;  
+}
+
+.container-footer{
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+    margin-top: 2rem;  
+}
+
+.container-footer ul li {
+    list-style-type: none;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+.container-footer ul li a{
+    color: #fff;
+    
+}
+
+.contact ul li{
+    margin-top: 2rem;  
+
+}
+
+.contact__list-icon{
+    display: flex;
+}
+
+.contact__list-icon li{
+    margin-right: 1.5rem;
+}
+
+.contact__list-icon i:hover{
+    opacity: 10;
+}
+
+.account ul li{
+    margin-top: 2rem;
+    color: #fff;
+}
+
+@media (max-width: 1023px){
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 1.5rem 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+
+    #menu-btn{
+        display:inline-block ;
+    }
+
+    #profile-btn{
+        display: none;
+    }
+
+    #noti-btn{
+        display: none;
+    }
+
+    #cart-btn{
+        display: none;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: -50rem;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 0.4rem 0.4rem rgba(14 55 54 / 14%);
+        border-top: 0.2rem solid var(--main-color);
+        transition: 0.2s;
+        text-align: left;
+        
+    }
+
+    .header .navbar a:hover{
+        border: none;
+    }
+
+    .header .navbar.active{
+        top:100%;
+
+    }
+
+    .header .navbar a{
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+
+    .introduce-text,
+    .quality-text
+    .vision-text{
+        width: 100%;
+        
+    }
+
+    .introduce-img img, .quality-img img, .vision-img img {
+        width: 70%;
+    }
+
+    .introduce-text h4,
+    .quality-text h4,
+    .vision-text h4{
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: 600;
+    }
+
+    .introduce-text p,
+    .quality-text p,
+    .vision-text p{
+    font-size: 1.6rem;
+    }
+
+    .introduce-text,
+    .quality-text,
+    .vision-text{
+    padding: 0;
+    }
+
+    .vision-text {
+        margin: 0 auto;
+    }
+
+    .container{
+        display: block;
+    }
+    
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .container{
+        display: block;
+    }
+
+    .introduce-text h4,
+    .quality-text h4,
+    .vision-text h4{
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: 600;
+    }
+
+    .introduce-text p,
+    .quality-text p,
+    .vision-text p{
+    font-size: 1.4rem;
+    }
+
+    .introduce-text,
+    .quality-text,
+    .vision-text{
+    padding: 0;
+    }
+
+    .introduce-img img, .quality-img img, .vision-img img {
+        width: 70%;
+    }
+
+
+    .vision-text {
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 740px){
+    .vision-text{
+        margin: 0 auto;
+    }
+}
